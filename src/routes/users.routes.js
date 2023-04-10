@@ -15,8 +15,10 @@ next();
 }*/
 const usersControllers = new UsersControllers();
 
-//Estudando POST
+//Criando usuario
 userRoutes.post("/", usersControllers.create);
+//Atualizando usuario
+userRoutes.put("/:id", usersControllers.update);
 
 //Esportando para quem quiser usar esse arquivo, poder ussar
 module.exports = userRoutes;
