@@ -4,10 +4,9 @@
   "description": "API desenvolvida no programa Explorer da Rocketseat",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/server.js",
     "dev": " nodemon ./src/server.js",
-    "migrate":"knex migrate:litest"
+    "migrate":"knex migrate:latest"
   },
   "keywords": [],
   "author": "Edimar Pires Monteiro Filho",

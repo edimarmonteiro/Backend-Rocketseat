@@ -7,7 +7,11 @@ module.exports = {
     connection: {
     filename: path.resolve(__dirname, "src", "database", "database.db")
     },
-    //Versionando o BD
+
+  pool: {
+    afterCreate: (conn, cb) => conn.run("PRAGMA foreign_keys = ON", cb)
+  },
+    //Versionando o BD (Informando on irei criar o bd)
   migrations: {
     directory: path.resolve(__dirname, "src", "database", "knex", "migrations")
   },
